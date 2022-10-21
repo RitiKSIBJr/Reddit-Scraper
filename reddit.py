@@ -3,10 +3,6 @@ from time import time
 import praw
 
 def scrape():
-    my_client_id = "5CYkvE-CSc7cxOhQvUCzeQ"
-    my_client_secret = "hTgsGSNs_j78NKfHEKv2vOxWXkr_kg"
-    my_user_agent = "Scraper 1.0"
-    reddit = praw.Reddit(client_id=my_client_id, client_secret=my_client_secret, user_agent=my_user_agent)
 
     for submission in reddit.subreddit('learnpython').hot(limit=None):
         title =     submission.title
@@ -33,4 +29,3 @@ if __name__ == "__main__":
     scrape()
 
 
-## Manage duplicate post in the post.csv
